@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="buyerDetails">
+    <div class="row col-sm-12">
+      <div class="col-sm-6 col-md-6">
+        <div class="col-sm-12">
+          <span class="lead">Buyer Name : {{buyerName}}</span>
+        </div>
+        <div class="col-sm-12">
+          <span class="lead">Buyer ID : {{buyerId}}</span>
+        </div>
+      </div>
+      <div class="col-sm-6 com-md-6">
+        <app-actions></app-actions> 
+      </div>
+    </div>
+  </div>
+  <div class="row">
+      <div class="tableContainer col-sm-12 col-md-12">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Operation type</th>
+              <th>Main CartItemCount</th>
+              <th>Error Names</th>
+              <th>CalLink</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor = "let buyer of results">
+              <td>{{buyer.auditTimeStamp}}</td>
+              <td>{{buyer.operationType}}</td>
+              <td>{{buyer.mainCartItemCount}}</td>
+              <td>{{buyer.errorNames}}</td>
+              <td ><a href="http://google.com" target="_blank">calLink</a></td>
+              <td ><a routerLink="userDetails/{{buyer.serialNumber}}">Details</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+  
+</div>

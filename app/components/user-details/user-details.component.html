@@ -1,0 +1,57 @@
+<div class="cols-m-12">
+  <span class="lead">{{details.auditInsertTimestamp}}  {{details.operationType}}</span>
+  <hr>
+  <div class="row header">
+    <div class="col-sm-6 userDetails row">
+      <div class="col-sm-6">
+        <span class="lead">Buyer Details</span>
+        <div>
+            <span>Buyer UserName: {{details.buyerUserName}}</span>
+        </div>
+        <div>
+          <span>Buyer ID: {{details.buyerId}}</span>
+        </div>
+        <div>
+          <span>Buyer Guid: {{details.buyerGuid}}</span>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <span class="lead">External Links</span>
+        <div>
+            <span><a href={{details.calLink}} target="_blank">CalLink</a></span>
+        </div>
+      </div>
+    </div>
+    <div class="appDetails">
+        <span class="lead">App Details</span>
+        <div>
+          <span>Client App Name: {{details.clientAppName}}</span>
+        </div>
+        <div>
+          <span>Site ID: {{details.siteId}}</span>
+        </div>
+    </div>
+  </div>
+  <hr>
+  <div class="col-sm-12 body">
+    <div class="section">
+        <span class="lead">Cart Details</span>
+        <div>
+          <span>Main Cart Item Count: {{details.mainCartItemCount}}</span>
+        </div>
+        <div>
+          <span>Cart Items: {{details.cartItems}}</span>
+        </div>
+    </div>
+    <hr>
+    <div class="section">
+        <span class="lead">Errors</span>
+        <div>
+          <span>DownStream Errors: {{details.mainCartItemCount}}</span>
+        </div>
+        <div>
+          <span>External Errors : {{details.cartItems}}</span>
+        </div>
+    </div>
+  </div>
+</div>

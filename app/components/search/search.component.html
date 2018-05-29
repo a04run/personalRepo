@@ -1,0 +1,32 @@
+<div>
+  <div class="formContainer col-sm-10">
+    <form #buyerForm ="ngForm" (ngSubmit)="onSubmit(buyerForm)">
+      <div class="form-group">
+          <label for="buyerName">BuyerUserName</label>
+          <input type="text"
+          name="buyerName"
+          class="form-control"
+          [(ngModel)]="buyer.firstName"
+          required
+          >
+      </div>
+      <div class="form-group">
+          <label for="startDate">Start Date</label>
+          <input type="date"
+          name="startDate"
+          class="form-control"
+          [(ngModel)]="buyer.startDate"
+          >
+      </div>
+      <div class="form-group">
+          <label for="endDate">End Date</label>
+          <input type="date"
+          name="endDate"
+          class="form-control"
+          [(ngModel)]="buyer.endDate"
+          >
+      </div>
+      <input type="submit" value="Submit" class="btn btn-primary btn-block">
+    </form>
+  </div>
+</div>
